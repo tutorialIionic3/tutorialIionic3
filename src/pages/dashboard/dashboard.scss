@@ -1,0 +1,21 @@
+page-dashboard {
+   .content{
+        background-color: color($colors, plus2);
+        color: color($colors, primary);
+    }
+    .item-md, .item-ios{
+        background-color: color($colors, plus);
+        color: color($colors, secondary);
+        height: 60px;
+    }
+    .item-wrapper{
+        background-color: color($colors, plus);
+        border: color($colors, primary) solid 1px;
+        margin-bottom: 15px;
+        height: 60px;
+        border-radius: 5px;
+    }
+    h2{
+        color: white;
+    }
+}

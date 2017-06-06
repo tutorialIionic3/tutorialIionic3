@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="login()">
+        <ion-icon name='md-exit'></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Mis Notas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="content">
+  <ion-list>
+    <ion-item-sliding *ngFor="let nota of notas | async">
+        <ion-item (click)="openNota(nota.titulo, nota.cuerpo)">
+          <h2>{{ nota.titulo }}</h2>
+          <p>{{ nota.cuerpo }}</p>
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="danger" icon-only (click)="removeNota(nota.titulo)"><ion-icon name="trash"></ion-icon></button>
+          <button ion-button color="secondary" icon-only (click)="editNota(nota.titulo, nota.cuerpo)"><ion-icon name="md-create"></ion-icon></button>
+        </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab color="primary" (click)="addNota()"><ion-icon name="md-add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

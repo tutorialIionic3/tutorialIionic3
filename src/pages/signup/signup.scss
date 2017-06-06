@@ -1,0 +1,13 @@
+page-signup {
+    .button{
+        width: 100%;
+    }
+   .content{
+        background-color: color($colors, plus2);
+        color: color($colors, primary);
+    }
+    .item-md, .item-ios{
+        background-color: transparent;
+        color: color($colors, secondary);
+    }
+}

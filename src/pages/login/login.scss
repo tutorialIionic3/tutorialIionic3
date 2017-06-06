@@ -1,0 +1,17 @@
+page-login {
+    .button{
+        width: 100%;
+        margin-top: 10px;
+    }
+   .content{
+        background-color: color($colors, plus2);
+        color: color($colors, primary);
+    }
+    a{
+        color: color($colors, secondary);
+    }
+    .item-md, .item-ios{
+        background-color: transparent;
+        color: color($colors, secondary);
+    }
+}

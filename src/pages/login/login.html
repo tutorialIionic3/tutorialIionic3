@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Log In</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="content">
+  <form #signInForm="ngForm" (submit)="signin()">
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary" floating>Correo</ion-label>
+            <ion-input clearInput [(ngModel)]="userModel.email" type="email" autocorrect="off" autocapitalize="none" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[.a-z{2,3}]"
+                required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" floating>Password</ion-label>
+            <ion-input clearInput [(ngModel)]="userModel.password" type="password" name="password" required minlength="6"></ion-input>
+        </ion-item>
+
+        <div padding-left padding-right padding-top>
+            <button class="button" ion-button icon-left [disabled]="!signInForm.form.valid" >
+              <ion-icon name='md-log-in'></ion-icon>
+              Log In
+            </button>
+        </div>
+
+        <ion-item padding-left padding-right>
+            <p>¿No tienes Usuario? <a (click)="signup()">Regístrate</a>
+        </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
